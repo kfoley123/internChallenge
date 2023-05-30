@@ -1,3 +1,29 @@
-console.log("hello");
+//ask: Write a function called firstNonRepeated that takes a single string s as input and returns the first non-repeated character in the string. If there is no non-repeated character, return an empty string.
 
-console.log("dog");
+//Input: A string s containing lowercase and/or uppercase English letters.
+
+//Output: A string representing the first non-repeated character in the input string or an empty string if there is no non-repeated character.
+
+//Example:
+
+//firstNonRepeated("hello") => "h"
+
+//firstNonRepeated("aabcc") => "b"
+
+//firstNonRepeated("aabbcc") => ""
+
+function firstNonRepeated(s: string): string {
+    let answer: string;
+
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] !== s[i + 1] && s[i] !== s[i - 1]) {
+            answer = s[i];
+            return answer;
+        }
+    }
+    answer = "";
+
+    return answer;
+}
+
+console.log(firstNonRepeated("aabbcc"));
