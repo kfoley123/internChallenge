@@ -13,17 +13,13 @@
 //firstNonRepeated("aabbcc") => ""
 
 function firstNonRepeated(s: string): string {
-    let answer: string;
-
     for (let i = 0; i < s.length; i++) {
         if (s[i] !== s[i + 1] && s[i] !== s[i - 1]) {
-            answer = s[i];
-            return answer;
+            return s[i];
         }
     }
-    answer = "";
 
-    return answer;
+    return "";
 }
 
-console.log(firstNonRepeated("aabbcc"));
+console.log(firstNonRepeated("aabbccdde"));
